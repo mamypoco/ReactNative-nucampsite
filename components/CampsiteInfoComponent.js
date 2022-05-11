@@ -31,9 +31,9 @@ class CampsiteInfo extends Component {
 
     render() {
         const campsiteId = this.props.navigation.getParam('campsiteId');
+        // Each screen component is provided with the navigation prop automatically. In CampsiteInfoComponent.js, we have navigate('CampsiteInfo', { campsiteId: item.id }), where we can access to it.
         const campsite = this.state.campsites.filter(campsite => campsite.id === campsiteId)[0];
           return <RenderCampsite campsite={campsite} />;
-
     }    
 }
 
