@@ -16,6 +16,7 @@ class Directory extends Component {
     };
 
     render() {
+        //Navigation prop: you can use "navigate" by using this.props.navigation 
         const { navigate } = this.props.navigation;
 
         const renderDirectoryItem = ({item}) => {
@@ -24,6 +25,7 @@ class Directory extends Component {
                     title={item.name}
                     subtitle={item.description}
                     onPress={() => navigate('CampsiteInfo', { campsiteId: item.id })}
+                    //navigate - Link to other screens:  navigation.navigate({ routeName, params, action, key })
                     leftAvatar={{ source: require('./images/react-lake.jpg')}}
                 />
             );
